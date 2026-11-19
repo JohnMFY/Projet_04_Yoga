@@ -18,19 +18,20 @@ describe('LoginComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LoginComponent],
-      providers: [SessionService],
-      imports: [
-        RouterTestingModule,
-        BrowserAnimationsModule,
-        HttpClientModule,
-        MatCardModule,
-        MatIconModule,
-        MatFormFieldModule,
-        MatInputModule,
-        ReactiveFormsModule]
-    })
-      .compileComponents();
+    providers: [SessionService],
+    imports: [
+      LoginComponent,
+      RouterTestingModule,
+      BrowserAnimationsModule,
+      HttpClientModule,
+      MatCardModule,
+      MatIconModule,
+      MatFormFieldModule,
+      MatInputModule,
+      ReactiveFormsModule
+    ]
+  })
+    .compileComponents();
     fixture = TestBed.createComponent(LoginComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
