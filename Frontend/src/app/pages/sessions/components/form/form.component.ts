@@ -51,11 +51,11 @@ export class FormComponent implements OnInit {
     if (!this.onUpdate) {
       this.sessionApiService
         .create(session)
-        .subscribe((_: Session) => this.exitPage('Session created !'));
+        .subscribe(() => this.exitPage('Session created !'));
     } else {
       this.sessionApiService
         .update(this.id!, session)
-        .subscribe((_: Session) => this.exitPage('Session updated !'));
+        .subscribe(() => this.exitPage('Session updated !'));
     }
   }
 
@@ -77,7 +77,7 @@ export class FormComponent implements OnInit {
         session ? session.description : '',
         [
           Validators.required,
-          Validators.max(2000)
+          Validators.maxLength(2000)
         ]
       ],
     });
@@ -85,6 +85,6 @@ export class FormComponent implements OnInit {
 
   private exitPage(message: string): void {
     this.matSnackBar.open(message, 'Close', { duration: 3000 });
-    this.router.navigate(['sessions']);
+    this.router.navigate(['/sessions']);
   }
 }
