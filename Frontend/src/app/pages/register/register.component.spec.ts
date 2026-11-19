@@ -15,19 +15,19 @@ describe('RegisterComponent', () => {
   let fixture: ComponentFixture<RegisterComponent>;
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [RegisterComponent],
-      imports: [
-        BrowserAnimationsModule,
-        HttpClientModule,
-        ReactiveFormsModule,  
-        MatCardModule,
-        MatFormFieldModule,
-        MatIconModule,
-        MatInputModule
-      ]
-    })
-      .compileComponents();
+  await TestBed.configureTestingModule({
+    imports: [
+      RegisterComponent,
+      BrowserAnimationsModule,
+      HttpClientModule,
+      ReactiveFormsModule,
+      MatCardModule,
+      MatFormFieldModule,
+      MatIconModule,
+      MatInputModule
+    ]
+  })
+    .compileComponents();
 
     fixture = TestBed.createComponent(RegisterComponent);
     component = fixture.componentInstance;
