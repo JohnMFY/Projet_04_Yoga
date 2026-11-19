@@ -20,19 +20,19 @@ describe('MeComponent', () => {
     }
   }
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [MeComponent],
-      imports: [
-        MatSnackBarModule,
-        HttpClientModule,
-        MatCardModule,
-        MatFormFieldModule,
-        MatIconModule,
-        MatInputModule
-      ],
-      providers: [{ provide: SessionService, useValue: mockSessionService }],
-    })
-      .compileComponents();
+   await TestBed.configureTestingModule({
+    imports: [
+      MeComponent,
+      MatSnackBarModule,
+      HttpClientModule,
+      MatCardModule,
+      MatFormFieldModule,
+      MatIconModule,
+      MatInputModule
+    ],
+    providers: [{ provide: SessionService, useValue: mockSessionService }],
+  })
+    .compileComponents();
 
     fixture = TestBed.createComponent(MeComponent);
     component = fixture.componentInstance;
