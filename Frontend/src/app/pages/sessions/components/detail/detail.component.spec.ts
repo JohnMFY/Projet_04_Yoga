@@ -24,15 +24,15 @@ describe('DetailComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
+        DetailComponent,
         RouterTestingModule,
         HttpClientModule,
         MatSnackBarModule,
         ReactiveFormsModule
       ],
-      declarations: [DetailComponent],
       providers: [{ provide: SessionService, useValue: mockSessionService }],
     })
-      .compileComponents();
+    .compileComponents();
       service = TestBed.inject(SessionService);
     fixture = TestBed.createComponent(DetailComponent);
     component = fixture.componentInstance;
