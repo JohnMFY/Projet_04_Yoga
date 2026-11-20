@@ -116,7 +116,7 @@ describe('DetailComponent', () => {
     expect(mockSessionApiService.unParticipate).toHaveBeenCalledWith('1', '1');
     expect(mockSessionApiService.detail).toHaveBeenCalled();
   });
-  it('Doit supprimer la session et rediriger vers sessions', () => {
+  it('Suppression de la session et redirection vers la page des sessions', () => {
     const router = TestBed.inject(Router);
     const navigateSpy = jest.spyOn(router, 'navigate');
 
