@@ -179,4 +179,18 @@ describe('FormComponent', () => {
 
     expect(navigateSpy).toHaveBeenCalledWith(['/sessions']);
   });
+
+  it('Redirige un user non admin vers la page des sessions', () => {
+    const router = TestBed.inject(Router);
+    const navigateSpy = jest.spyOn(router, 'navigate');
+
+    mockSessionService.sessionInformation.admin = false;
+
+    component.ngOnInit();
+
+    expect(navigateSpy).toHaveBeenCalledWith(['/sessions']);
+
+    mockSessionService.sessionInformation.admin = true;
+  });
+
 });
